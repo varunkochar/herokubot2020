@@ -9,12 +9,15 @@ const org = nforce.createConnection({
   clientSecret: SALESFORCE_CONSUMER_SECRET,
   redirectUri: "http://localhost:3000/oauth/_callback",
   mode: "single",
-  
+    environment: "sandbox",  
   autoRefresh: true
 });
 
 login = () => {
+  console.log("SALESFORCE_USERNAME = "+SALESFORCE_USERNAME);
+  console.log("SALESFORCE_PASSWORD = "+SALESFORCE_PASSWORD);
   org.authenticate(
+    
     { username: SALESFORCE_USERNAME, password: SALESFORCE_PASSWORD },
     err => {
       if (err) {
