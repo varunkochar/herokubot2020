@@ -10,6 +10,8 @@ var https_port = process.env.HTTPS_PORT || parseInt(port) + 1;
 var jsonParser = bodyParser.json();
 
 app.get("/", function(req, res) {
+  console.log("req = "+req);
+  console.log("res = "+res);
   res.send("Nothing to see here");
 });
 
