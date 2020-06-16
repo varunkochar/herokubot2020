@@ -13,7 +13,7 @@ app.get("/", function(req, res) {
   console.log("req = " + req);
   console.log("res = " + res);
   console.log("inside get " );
-  res.send("Nothing chek try printing. "+req+".  " +res);
+  res.send("Nothing chek try printing. "+JSON.stringify(req)+".  " +JSON.stringify(res));
 });
 
 // Change the URL to an individual AND hard to guess URL
