@@ -9,6 +9,7 @@ const org = nforce.createConnection({
   clientSecret: SALESFORCE_CONSUMER_SECRET,
   redirectUri: "http://localhost:3000/oauth/_callback",
   mode: "single",
+  environment: 'sandbox',
   autoRefresh: true
 });
 
