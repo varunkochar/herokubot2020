@@ -4,7 +4,7 @@ var chat = require("./libs/hangout-chat.js");
 
 var app = express();
 
-var port = process.env.PORT || 5001;
+var port = process.env.PORT || 5003;
 var https_port = process.env.HTTPS_PORT || parseInt(port) + 1;
 
 var jsonParser = bodyParser.json();
