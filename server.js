@@ -12,7 +12,7 @@ var jsonParser = bodyParser.json();
 app.get("/", function(req, res) {
   console.log("req = "+req);
   console.log("res = "+res);
-  res.send("Nothing to see here");
+  res.send("Nothing chek try printing");
 });
 
 // Change the URL to an individual AND hard to guess URL
