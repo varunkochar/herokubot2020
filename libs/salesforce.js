@@ -50,6 +50,8 @@ exports.callApex = (body) =>{
   org.apexRest({uri:"/googleHackBot", method: "POST", body : body}, function(err,resp){
       
   console.log("Inside call apex rest");
+    console.log("err "+err);
+    console.log("resp"+resp);
    if (err) {
         reject(err);
       } else {
