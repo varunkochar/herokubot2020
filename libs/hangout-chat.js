@@ -37,6 +37,7 @@ var body; //= { title: 'hello', num : 1 };
 salesforce.callApex(message).then(result => {
 console.log("result" +result);
   answer.text = result;
+  res.end(JSON.stringify(answer));
 });
      }
   else if (message.match("list accounts .*")) {
