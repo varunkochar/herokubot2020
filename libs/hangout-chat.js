@@ -1,4 +1,5 @@
 const salesforce = require("./salesforce.js");
+const server = require("./server.js");
 
 const infoMessage = `Thanks for adding me!`;
 const commandMessage = `You can ask me the following commands:
@@ -34,8 +35,8 @@ processBasicChat = (message, res) => {
     // body payload structure is depending to the Apex REST method interface.
 var body; //= { title: 'hello', num : 1 };
     console.log("salesforce.apex "+salesforce.apex);
-    console.log("salesforce.googleRequest = " +salesforce.googleRequest);
-salesforce.callApex(salesforce.googleRequest).then(result => {
+    console.log("server.googleRequest = " +server.googleRequest);
+salesforce.callApex(server.googleRequest).then(result => {
 console.log("result" +result);
   answer.text = result;
   res.end(JSON.stringify(answer));
