@@ -34,7 +34,7 @@ processBasicChat = (message, res) => {
     console.log("Inside Apex Condition");
     // body payload structure is depending to the Apex REST method interface.
 var body; //= { title: 'hello', num : 1 };
-    console.log("salesforce.apex "+salesforce.apex);
+   // console.log("salesforce.apex "+salesforce.apex);
     console.log("server.googleRequest = " +server.googleRequest);
 salesforce.callApex(message).then(result => {
 console.log("result" +result);
