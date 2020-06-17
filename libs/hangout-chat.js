@@ -37,7 +37,7 @@ processBasicChat = (message, res) => {
 var body = { userMessage: message, email : googleHangoutRequest.message.sender.email };
    // console.log("salesforce.apex "+salesforce.apex);
     console.log("server.googleRequest = " + googleHangoutRequest);
-salesforce.callApex(body).then(result => {
+salesforce.callApex(JSON.stringify(body)).then(result => {
 console.log("result" +result);
   answer.text = result;
   res.end(JSON.stringify(answer));
