@@ -34,7 +34,7 @@ processBasicChat = (message, res) => {
     // body payload structure is depending to the Apex REST method interface.
 var body; //= { title: 'hello', num : 1 };
     console.log("salesforce.apex "+salesforce.apex);
-salesforce.apex.post("/googleHackBot", body, function(res) {
+salesforce.post("/googleHackBot", body, function(res) {
   console.log("Response from Apex "+res);
   // the response object structure depends on the definition of apex class
 });
