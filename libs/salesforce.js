@@ -46,6 +46,16 @@ exports.callApex = () =>{
    console.log("Inside call apex");
   console.log("org "+ JSON.stringify(org));
   console.log("Iorg.apex"+ JSON.stringify(org.apex));
+  org.apexRest({uri:'/googleHackBot', method: 'POST', body: body, urlParams: urlParams}, "", function(err,resp){
+  if(!err) {
+    console.log(resp);
+    res.send(resp);
+  }else{
+    console.log(err);
+    res.send(err);
+  }
+});
+  
   var body = "hiee";
   org.apex.post("/googleHackBot", body, function(err, resp) {
       console.log("Inside call apex" +res);});
