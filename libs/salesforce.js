@@ -45,9 +45,14 @@ exports.queryForBot = query => {
 exports.callApex = () =>{
    console.log("Inside call apex");
   return new Promise((resolve, reject) => {
-    org.apex.post("/googleHackBot", body, function(res) {
+    var body = {"hiee"};
+    org.apex.post("/googleHackBot", body, function(err, resp) {
       console.log("Inside call apex" +res);
-      resolve(res);
+       if (err) {
+        reject(err);
+      } else {
+        resolve(resp.records);
+      }
       // the response object structure depends on the definition of apex class
     });
    
