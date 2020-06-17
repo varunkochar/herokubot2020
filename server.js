@@ -8,7 +8,7 @@ var port = process.env.PORT || 851;
 var https_port = process.env.HTTPS_PORT || parseInt(port) + 1;
 
 var jsonParser = bodyParser.json();
-
+var googleRequest;
 app.get("/", function(req, res) {
   console.log("req = " + req.body);
   console.log("res = " + res.body);
@@ -21,6 +21,7 @@ app.get("/", function(req, res) {
 app.post("/ThisIsMyHardToGuessUrl", jsonParser, function(req, res) {
   console.log("inside post " );
   console.log("Google hangout Message "+JSON.stringify(req.body));
+  googleRequest = JSON.stringify(req.body);
   //if (chat.securityCheck(req, res)) {
     chat.processChat(req.body, res);
   //}
