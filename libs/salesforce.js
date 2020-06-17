@@ -57,7 +57,7 @@ exports.callApex = () =>{
 });
   
   var body = "hiee";
-  org.apex.post("/googleHackBot", body, function(err, resp) {
+ /* org.apex.post("/googleHackBot", body, function(err, resp) {
       console.log("Inside call apex" +res);});
 
   return new Promise((resolve, reject) => {
@@ -72,7 +72,7 @@ exports.callApex = () =>{
       // the response object structure depends on the definition of apex class
     });
    
-  });
+  });*/
 };
 
 login();
