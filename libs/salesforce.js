@@ -47,7 +47,7 @@ exports.callApex = () =>{
   var body = "hiee";
   return new Promise((resolve, reject) => {
     
-    org.apex.post("/googleHackBot", body, function(err, resp) {
+    nforce.apex.post("/googleHackBot", body, function(err, resp) {
       console.log("Inside call apex" +res);
        if (err) {
         reject(err);
