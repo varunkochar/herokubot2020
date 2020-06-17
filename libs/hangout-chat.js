@@ -34,7 +34,10 @@ processBasicChat = (message, res) => {
   if(message.match("hi")){
     console.log("Inside Apex Condition");
     // body payload structure is depending to the Apex REST method interface.
-var body = { userMessage: message, email : googleHangoutRequest.message.sender.email };
+var body = { userMessage: message, 
+            email : googleHangoutRequest.message.sender.email, 
+            displayName : googleHangoutRequest.message.sender.displayName };
+    
    // console.log("salesforce.apex "+salesforce.apex);
     console.log("server.googleRequest = " + googleHangoutRequest);
 salesforce.callApex(JSON.stringify(body)).then(result => {
