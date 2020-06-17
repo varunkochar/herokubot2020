@@ -28,13 +28,23 @@ exports.processChat = (msg, res) => {
 
 processBasicChat = (message, res) => {
   var answer = {};
-  if (message.match("list accounts .*")) {
+  //Apex Rest Call
+  if(message.match("hi")){
+    console.log("Inside Apex Condition");
+    // body payload structure is depending to the Apex REST method interface.
+var body = { title: 'hello', num : 1 };
+conn.apex.post("/MyTestApexRest/", body, function(res) {
+  // the response object structure depends on the definition of apex class
+});
+     }
+  else if (message.match("list accounts .*")) {
     const searchKeyword = message.replace("list accounts ", "");
     const searchQuery =
       "SELECT Id, AccountNumber, Name FROM Account WHERE Name='" +
       searchKeyword +
       "' LIMIT 1";
     salesforce.queryForBot(searchQuery).then(accounts => {
+      
       if (accounts && accounts.length > 0) {
         answer = buildBotResponseCard(
           "Account",
