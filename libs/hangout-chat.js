@@ -32,7 +32,8 @@ processBasicChat = (message, res) => {
   if(message.match("hi")){
     console.log("Inside Apex Condition");
     // body payload structure is depending to the Apex REST method interface.
-var body = { title: 'hello', num : 1 };
+var body; //= { title: 'hello', num : 1 };
+    console.log("salesforce.apex "+salesforce.apex);
 salesforce.apex.post("/googleHackBot", body, function(res) {
   console.log("Response from Apex "+res);
   // the response object structure depends on the definition of apex class
