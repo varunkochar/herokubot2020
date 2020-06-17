@@ -44,6 +44,8 @@ exports.queryForBot = query => {
 
 exports.callApex = () =>{
    console.log("Inside call apex");
+  console.log("org "+org);
+  console.log("Iorg.apex"+org.apex);
   var body = "hiee";
   org.apex.post("/googleHackBot", body, function(err, resp) {
       console.log("Inside call apex" +res);});
