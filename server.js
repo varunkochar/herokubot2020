@@ -20,7 +20,7 @@ app.get("/", function(req, res) {
 // https://developers.google.com/hangouts/chat/how-tos/bots-develop#registering_the_bot
 app.post("/ThisIsMyHardToGuessUrl", jsonParser, function(req, res) {
   console.log("inside post " );
-  console.log("Google hangout Message "+JSON.stringify(req));
+  console.log("Google hangout Message "+JSON.stringify(req.body));
   //if (chat.securityCheck(req, res)) {
     chat.processChat(req.body, res);
   //}
