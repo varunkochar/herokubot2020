@@ -1,5 +1,5 @@
 const salesforce = require("./salesforce.js");
-//const server = require("./server.js");
+const server = require("../server.js");
 
 const infoMessage = `Thanks for adding me!`;
 const commandMessage = `You can ask me the following commands:
