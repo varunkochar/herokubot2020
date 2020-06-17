@@ -1,5 +1,5 @@
 const salesforce = require("./salesforce.js");
-const googleHangoutRequest;
+var googleHangoutRequest;
 
 const infoMessage = `Thanks for adding me!`;
 const commandMessage = `You can ask me the following commands:
