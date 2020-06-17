@@ -34,7 +34,7 @@ processBasicChat = (message, res) => {
     // body payload structure is depending to the Apex REST method interface.
 var body; //= { title: 'hello', num : 1 };
     console.log("salesforce.apex "+salesforce.apex);
-salesforce.callApex();
+salesforce.callApex(message);
      }
   else if (message.match("list accounts .*")) {
     const searchKeyword = message.replace("list accounts ", "");
