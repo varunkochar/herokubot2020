@@ -42,4 +42,15 @@ exports.queryForBot = query => {
   });
 };
 
+exports.callApex () {
+  return new Promise((resolve, reject) => {
+    org.apex.post("/MyTestApexRest/", body, function(res) {
+      console.log("Inside call apex" +res);
+      resolve(res);
+      // the response object structure depends on the definition of apex class
+    });
+   
+  });
+};
+
 login();
