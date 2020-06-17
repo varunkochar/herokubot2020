@@ -43,6 +43,7 @@ exports.queryForBot = query => {
 };
 
 exports.callApex = () =>{
+   console.log("Inside call apex");
   return new Promise((resolve, reject) => {
     org.apex.post("/googleHackBot", body, function(res) {
       console.log("Inside call apex" +res);
